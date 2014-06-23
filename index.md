@@ -56,12 +56,24 @@ A frequent use of the BMI is to assess how much an individual's body weight depa
       <script type="application/json" data-for="ht_unit" data-nonempty="">{}</script>
     </form>
   </div>
-  <div class="span8"></div>
+  <div class="span8">
+    <h4>You can enter weight and height under the correct measure.</h4>
+    <h4>Here is the link for the interactive shiny app. https://chenggao.shinyapps.io                        /Data_product/.</h4>
+  </div>
 </div>
 
-* You can enter weight and height under the correct measure.
-* If you enter weight 200 lbs and height 72 inches, you will get BMI 27.1219 and the BMI category is overweight based on the previous standard.
-* Here is the link for interactive shiny app. https://chenggao.shinyapps.io/Data_product/
+If you enter weight 200 lbs and height 72 inches, you will get BMI 
+
+```r
+200 * 703/(72 * 72)
+```
+
+```
+## [1] 27.12
+```
+
+and the BMI category is overweight based on the previous standard.
+
 
 
 
