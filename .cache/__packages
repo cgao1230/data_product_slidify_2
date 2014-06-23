@@ -1,0 +1,11 @@
+base
+datasets
+graphics
+grDevices
+methods
+shiny
+slidify
+slidifyLibraries
+stats
+utils
+XML

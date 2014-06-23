@@ -1,0 +1,79 @@
+---
+title       : BMI calculator
+subtitle    : my first shiny app        
+author      : Cheng Gao 
+job         : Graduate student
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, shiny,interactive,bootstrap,quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## What is BMI?
+
+* BMI is short for Body Mass Index. It is a meausre of relative weight based on an individual'smass and height.
+* It has formula (in metric) $$ BMI=mass(kg)/(height(m)^2) $$
+or the formula can be expressed in standard measure $$ BMI=mass(lbs)/(height(inch)^2) $$
+*Just for your reference 1 feet = 12 inches
+
+--- 
+
+## Categories of BMI
+A frequent use of the BMI is to assess how much an individual's body weight departs from what is normal or desirable for a person of his or her height. There are variety of standards for categories of BMI. In this BMI calculator app, we use,
+* less than 18.5: underweight
+* greater than 18.5 and less than 24.9: normal
+* greater than 24.9 and less than 30.0: overweight
+* greater than 30.0: obesity
+
+---
+
+## What does BMI calculator provide?
+* allows users to input her or his weight and height
+* allows users to choose weight unit and height unit
+* verifies users' inputs
+* gives BMI value
+* gives BMI category
+
+--- 
+
+## What does it work?
+``` {r opts.label = 'shiny'}
+slidifyUI(
+        
+        sidebarPanel(
+                
+                numericInput('weight','Weight',1),
+                selectInput("wt_unit", "Weight unit",c("lbs", "kgs")),
+                numericInput('height','Height',1),
+                selectInput("ht_unit", "Height unit",c("inches", "m")),
+                submitButton('Calculate BMI')
+        ),
+        
+        mainPanel(
+                h4('Weight you entered:'),
+                verbatimTextOutput("weight"),
+                h4('Height you entered:'),
+                verbatimTextOutput("height"),
+                
+                h4('Your BMI is '),
+                verbatimTextOutput("BMI"),
+                h4('Your BMI category:'),
+                verbatimTextOutput("BMI_cat")
+        )
+        
+)
+```
+
+
+
+
+
+
+
+
+
+
+
+
