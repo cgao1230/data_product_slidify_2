@@ -54,23 +54,14 @@ A frequent use of the BMI is to assess how much an individual's body weight depa
       <select id="ht_unit"><option value="inches" selected>inches</option>
 <option value="m">m</option></select>
       <script type="application/json" data-for="ht_unit" data-nonempty="">{}</script>
-      <div>
-        <button type="submit" class="btn btn-primary">Calculate BMI</button>
-      </div>
     </form>
   </div>
-  <div class="span8">
-    <h4>Weight you entered:</h4>
-    <pre id="weight" class="shiny-text-output"></pre>
-    <h4>Height you entered:</h4>
-    <pre id="height" class="shiny-text-output"></pre>
-    <h4>Your BMI is </h4>
-    <pre id="BMI" class="shiny-text-output"></pre>
-    <h4>Your BMI category:</h4>
-    <pre id="BMI_cat" class="shiny-text-output"></pre>
-  </div>
+  <div class="span8"></div>
 </div>
 
+* You can enter weight and height under the correct measure.
+* If you enter weight 200 lbs and height 72 inches, you will get BMI 27.1219 and the BMI category is overweight based on the previous standard.
+* Here is the link for interactive shiny app. https://chenggao.shinyapps.io/Data_product/
 
 
 

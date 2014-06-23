@@ -47,24 +47,18 @@ slidifyUI(
                 numericInput('weight','Weight',1),
                 selectInput("wt_unit", "Weight unit",c("lbs", "kgs")),
                 numericInput('height','Height',1),
-                selectInput("ht_unit", "Height unit",c("inches", "m")),
-                submitButton('Calculate BMI')
+                selectInput("ht_unit", "Height unit",c("inches", "m"))
         ),
         
         mainPanel(
-                h4('Weight you entered:'),
-                verbatimTextOutput("weight"),
-                h4('Height you entered:'),
-                verbatimTextOutput("height"),
                 
-                h4('Your BMI is '),
-                verbatimTextOutput("BMI"),
-                h4('Your BMI category:'),
-                verbatimTextOutput("BMI_cat")
         )
         
 )
 ```
+* You can enter weight and height under the correct measure.
+* If you enter weight 200 lbs and height 72 inches, you will get BMI `r 200*703/(72*72) ` and the BMI category is overweight based on the previous standard.
+* Here is the link for interactive shiny app. https://chenggao.shinyapps.io/Data_product/
 
 
 
